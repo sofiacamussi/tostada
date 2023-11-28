@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Tirar la Tostada</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bar cara" id="TostadaAbajo"></div>
+        <div class="bar cruz" id="TostadaArriba"></div>
+        <img src="https://hips.hearstapps.com/hmg-prod/images/articles/2016/02/gettyimages-109452072-food-on-floor-stuart-minzey-opener-1470869282.jpg?resize=1024:*" alt="Tostada facing down" class="toast-image" id="ToastDownImage">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn8J4BGXJThU759V1p8Ae1E5ueSc1r2LMLpofYydCk7Jwi2YnQQdCjX4ASg5PUw2Gewg&usqp=CAU" alt="Tostada facing up" class="toast-image" id="ToastUpImage">
+    </div>
+    <p>Cantidad de tiradas: <span id="TotalTiradas">0</span></p>
+    <p>Arriba: <span id="TostadaArribaCount">0</span></p>
+    <p>Abajo: <span id="TostadaAbajoCount">0</span></p>
+    <button onclick="simularTiradaYTostada()">Tirar La Tostada</button>
+    <div id="resultados"></div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+
