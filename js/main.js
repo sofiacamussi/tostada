@@ -2,7 +2,7 @@ let totalTiradas = 0;
 let tostadaArriba = 0;
 let tostadaAbajo = 0;
 
-function simularTiradaYTostada() {
+function simularTiradaYTostada() {    
     const tostadaArribaElement = document.getElementById('TostadaArriba');
     const tostadaAbajoElement = document.getElementById('TostadaAbajo');
     const totalTiradasElement = document.getElementById('TotalTiradas');
@@ -27,7 +27,7 @@ function simularTiradaYTostada() {
     }
 
     totalTiradas++;
-
+    
     // cuentas de moneda en HTML
     totalTiradasElement.textContent = totalTiradas;
     tostadaArribaCountElement.textContent = tostadaArriba;
@@ -36,3 +36,16 @@ function simularTiradaYTostada() {
     // // borra los resultados previos de la tirada de tostada
     resultadosDiv.innerHTML = '';
 }
+
+function startSimulation() {
+    const intervalId = setInterval(() => {
+        simularTiradaYTostada();
+
+        if (totalTiradas === 50) {
+            clearInterval(intervalId);
+        }
+    }, 1000); 
+}
+
+startSimulation();
+
